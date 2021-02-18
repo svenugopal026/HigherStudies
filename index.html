@@ -1,47 +1,27 @@
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Login Page</title>
-</head>
-<body>
-<form name="loginForm" method="post" action="main.html">
-<table width="20%" bgcolor="0099CC" align="center">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Password Protected page</title>
+<script type="text/javascript">
+var s ="";
 
-<tr>
-<td colspan=2><center><font size=4><b>HTML Login Page</b></font></center></td>
-</tr>
-
-<tr>
-<td>Username:</td>
-<td><input type="text" size=25 name="userid"></td>
-</tr>
-
-<tr>
-<td>Password:</td>
-<td><input type="Password" size=25 name="pwd"></td>
-</tr>
-
-<tr>
-<td ><input type="Reset"></td>
-<td><input type="submit" onclick="return check(this.form)" value="Login"></td>
-</tr>
-
-</table>
-</form>
-<script language="javascript">
-function check(form)
+while (s!= "vce026")
 {
-
-if(form.userid.value == "Roseindia" && form.pwd.value == "Roseindia")
+s=prompt("please enter your password");
+if (s=="mypassword")
 {
-	return true;
+window.location.href="main.html"; //page to redirect if password entered is correct
+
 }
 else
 {
-	alert("Error Password or Username")
-	return false;
+alert("Incorrect password-Try again");
+
 }
 }
 </script>
+</head>
 
+<body>
 </body>
 </html>
